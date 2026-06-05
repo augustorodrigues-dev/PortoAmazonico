@@ -1,0 +1,269 @@
+/* ── Indicators Page ── */
+.indicators-page {
+  padding: 2rem;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.indicators-header {
+  margin-bottom: 2rem;
+}
+
+.indicators-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.4rem;
+}
+
+.indicators-header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ── KPI Grid ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-icon {
+  font-size: 1.6rem;
+  color: var(--verde-floresta, #2e7d52);
+  background: rgba(46, 125, 82, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kpi-content {
+  flex: 1;
+}
+
+.kpi-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 0.2rem;
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0 0 0.4rem;
+}
+
+.kpi-trend {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ── Charts Row ── */
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chart-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.chart-icon {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--verde-floresta, #2e7d52);
+}
+
+.chart-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.chart-body {
+  width: 100%;
+}
+
+/* ── Ranking Table ── */
+.ranking-table-wrapper {
+  overflow-x: auto;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.ranking-table th {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  color: #888;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.ranking-table td {
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid #f5f5f5;
+  color: #333;
+}
+
+.ranking-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rank-cell {
+  width: 40px;
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.rank-1 { background: #e8b923; }
+.rank-2 { background: #aaa; }
+.rank-3 { background: #c89f5e; }
+.rank-4,
+.rank-5 { background: #e0e0e0; color: #666; }
+
+.name-cell {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.community-cell {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.volume-cell {
+  font-weight: 600;
+  color: #2e7d52;
+}
+
+.reputation-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stars {
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.1rem;
+  color: #e8b923;
+}
+
+.reputation-value {
+  font-weight: 700;
+  color: #e8b923;
+  font-size: 0.9rem;
+}
+
+/* ── Recharts Tooltip Custom ── */
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .indicators-page {
+    padding: 1rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-card {
+    padding: 1.25rem;
+  }
+
+  .indicators-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .chart-card {
+    padding: 1rem;
+  }
+
+  .ranking-table th,
+  .ranking-table td {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .community-cell {
+    display: none;
+  }
+}
